@@ -4,7 +4,7 @@ Reference:
 this channel seems to be reasonable. the article explains things very well.
 [Implement Producer/Consumer patterns using Channel in C#](https://saigontechnology.com/blog/implement-producerconsumer-patterns-using-channel-in-c)
 
-Avoid freezing UI when using this program: [here](https://stackoverflow.com/questions/69565851/using-await-task-run-somemethodasync-vs-await-somemethodasync-in-a-ui)
+Avoid freezing UI when applying this producer_consumer in a UI program: [here](https://stackoverflow.com/questions/69565851/using-await-task-run-somemethodasync-vs-await-somemethodasync-in-a-ui)
 
 
 
