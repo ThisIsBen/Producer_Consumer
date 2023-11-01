@@ -6,6 +6,9 @@ this channel seems to be reasonable. the article explains things very well.
 
 
 
+
+
+
 ![image](https://github.com/ThisIsBen/Producer_Consumer/assets/8150459/1870f14f-84f7-4773-8751-e8d1f10dd2db)
 
 
