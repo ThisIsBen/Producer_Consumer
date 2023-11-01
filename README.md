@@ -46,5 +46,5 @@ BoundedChannelFullMode.DropNewest
 Channel only saves pointers of its content, if its content are of Object type.
 
 If you change the object right after writing to channel, the object you get from channel will be the changed one.
-![Uploading image.png…]()
+
 
