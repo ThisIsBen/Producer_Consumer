@@ -4,13 +4,30 @@ Reference:
 this channel seems to be reasonable. the article explains things very well.
 [Implement Producer/Consumer patterns using Channel in C#](https://saigontechnology.com/blog/implement-producerconsumer-patterns-using-channel-in-c)
 
-Avoid freezing UI when applying this producer_consumer in a UI program: [here](https://stackoverflow.com/questions/69565851/using-await-task-run-somemethodasync-vs-await-somemethodasync-in-a-ui)
-
-
-
-
 
 ![image](https://github.com/ThisIsBen/Producer_Consumer/assets/8150459/1870f14f-84f7-4773-8751-e8d1f10dd2db)
+
+
+
+Avoid freezing UI when applying this producer_consumer in a UI program: [here](https://stackoverflow.com/questions/69565851/using-await-task-run-somemethodasync-vs-await-somemethodasync-in-a-ui)
+
+When using simply run an async function to activate a consumer
+
+
+
+![image](https://github.com/ThisIsBen/Producer_Consumer/assets/8150459/7a86ef16-ef64-4e1b-a3a4-b9094e9c605f)
+
+
+
+After using Task.run to activate a consumer
+
+
+
+
+![image](https://github.com/ThisIsBen/Producer_Consumer/assets/8150459/a216165c-ecd5-4d32-9247-911db2c5f750)
+
+
+
 
 
 -Use unbounded channel 
@@ -42,9 +59,31 @@ BoundedChannelFullMode.DropOldest
 BoundedChannelFullMode.DropNewest
 0...8,99
 
+Channelから内容取得：
+'''
+while (await _reader.WaitToReadAsync()) //ここでChannel内に内容が追加されるのを待っている
+                {
+                    string oriPath= "";
+                    
+                    //Consume the data in the queue
+                    if (_reader.TryRead(out oriPath))
+                    {
+                               //Channelから取り出した内容を処理する
+		   }
+		
+		}
+ //Channelがcompleteとマークされたら、WaitToReadAsyncはfalseを返し、ここにくる。
+ Console.WriteLine($"CONSUMER ({_identifier}): 終了");
+'''
+
+ WaitToReadAsync　will complete with a true result when data is available to read or with a false result when no further data will ever be available to be read due to the channel completing successfully.
+![image](https://github.com/ThisIsBen/Producer_Consumer/assets/8150459/eb992cb0-3492-4115-b21d-e42f5cd3dc66)
+
 
 Channel only saves pointers of its content, if its content are of Object type.
 
 If you change the object right after writing to channel, the object you get from channel will be the changed one.
+
+
 
 
