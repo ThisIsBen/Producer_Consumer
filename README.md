@@ -2,7 +2,10 @@
 
 Reference:
 this channel seems to be reasonable. the article explains things very well.
-Implement Producer/Consumer patterns using Channel in C# (saigontechnology.com)![image](https://github.com/ThisIsBen/Producer_Consumer/assets/8150459/1d98a114-1f5e-40e6-a3d2-6f15f25cb886)
+[Implement Producer/Consumer patterns using Channel in C#](https://saigontechnology.com/blog/implement-producerconsumer-patterns-using-channel-in-c)
+
+
+
 ![image](https://github.com/ThisIsBen/Producer_Consumer/assets/8150459/1870f14f-84f7-4773-8751-e8d1f10dd2db)
 
 
