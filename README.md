@@ -10,6 +10,11 @@ this channel seems to be reasonable. the article explains things very well.
 
 
 Avoid freezing UI when applying this producer_consumer in a UI program: [here](https://stackoverflow.com/questions/69565851/using-await-task-run-somemethodasync-vs-await-somemethodasync-in-a-ui)
+Why UI program run the rest of the program after await with the thread that called await?
+[here](https://www.pluralsight.com/guides/using-task-run-async-await)
+![image](https://github.com/ThisIsBen/Producer_Consumer/assets/8150459/3d6f953e-00c5-41c2-8a4d-009709ae5329)
+
+Launching an operation on a separate thread via Task.Run is mainly useful for CPU-bound operations, not I/O-bound operations.
 
 When using simply run an async function to activate a consumer
 
