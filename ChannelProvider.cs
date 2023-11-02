@@ -47,7 +47,7 @@ namespace Producer_Consumer
 
                 //For Console program:
                 //This works in Console program, but freezes UI in a UI program.
-                //consumerTasks.Add(consumers[i].ConsumeData(TabCamera));//Begin consuming content from the Channel
+                //consumerTasks.Add(consumers[i].ConsumeData(destFolder));//Begin consuming content from the Channel
 
                 //For UI program(Windows Form, WPF):
                 int index = i;
